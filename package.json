@@ -1,0 +1,31 @@
+{
+  "name": "testcafe-example",
+  "version": "1.0.0",
+  "description": "An example project running e2e tests with TestCafe",
+  "engines": {
+    "node": ">=16"
+  },
+  "standard": {
+    "globals": [
+      "t",
+      "fixture",
+      "test"
+    ]
+  },
+  "scripts": {
+    "testcafe": "testcafe",
+    "test": "npm run testcafe chrome tests/",
+    "all": "npm run testcafe -- -c 2 chrome:headless tests/",
+    "safari": "npm run testcafe safari tests/",
+    "firefox": "npm run testcafe firefox tests/",
+    "ie": "npm run testcafe 'browserstack:ie@11.0:Windows 10' tests/",
+    "pretty": "npx standard --fix"
+  },
+  "author": "Brine",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "testcafe": "^1.18.4",
+    "testcafe-browser-provider-browserstack": "^1.13.1"
+  }
+}
